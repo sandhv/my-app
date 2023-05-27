@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Buttton from './components/Button'
+import Buttton from './components/Button/Button'
 
 function App() {
   const [show, setShow] = useState(false)
@@ -10,21 +10,24 @@ function App() {
   const onShow = () => setShow(true)
   const onHide = () => setShow(false)
 
-  if(show){
-    return (
-      <>
-        <Buttton onClick={onShow} children={<span>Comprar</span>}/>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, praesentium? Obcaecati, amet dolorum atque doloremque quam neque laudantium autem mollitia aperiam ab impedit voluptas voluptatem at perspiciatis, hic magnam. Quos?</p>
-      </>
-    )
-  } 
   return (
     <>
-      <Buttton onClick={onShow} children={<span>Comprar</span>}/>
+      <Buttton onClick={show ? onHide : onShow}
+        children={<span>{show ? 'Ocultar' : 'Mostrar'}</span>} />
+
+      <Buttton variant="outline"
+        children={<span>Outline</span>} />
+
+      <Buttton variant="ghost"
+        children={<span>Ghost</span>} />
+
+      <Buttton href="#" variant="link"
+        children={<span>Link</span>} />
+
     </>
   )
 
- 
+
 }
 
 export default App

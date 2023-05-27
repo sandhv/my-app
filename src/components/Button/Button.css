@@ -1,0 +1,48 @@
+button {
+    transition: all .3 ease-in-out;
+}
+
+button:hover {
+  scale: 1.05;
+  cursor: pointer;
+}
+
+
+.button {
+    padding: 4px 16px;
+    background-color: steelblue;
+    color: white;
+    border: none;
+    border-radius: 500px ;
+    margin: 2px;
+}
+
+.outline {
+    padding: 4px 16px;
+    background-color: transparent;
+    color: steelblue;
+    border: 2px solid steelblue;
+    border-radius: 500px ;
+    margin: 2px;
+}
+
+.ghost {
+    padding: 4px 16px;
+    background-color: transparent;
+    color: steelblue;
+    border: none;
+    margin: 2px;
+}
+
+.link {
+    padding: 4px 16px;
+    background-color: transparent;
+    color: steelblue;
+    border: none;
+    margin: 0;
+    text-decoration: underline;
+    display: inline;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
